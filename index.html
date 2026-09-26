@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fresh Dairy Shop</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>🥛 Fresh Dairy Shop</h1>
+    <p>Pure & Fresh Dairy Delivered to Your Doorstep</p>
+  </header>
+
+  <main class="container">
+    <h2>Our Products</h2>
+    <div class="product-grid">
+      
+      <!-- Product 1: Milk -->
+      <div class="product-card">
+        <img src="https://luckyfoods.com.pk/wp-content/uploads/2024/11/Lucky-Foods-Full-Cream-Pasteurized-Milk-Bottle.webp" alt="Fresh Milk">
+        <h3>Fresh Farm Milk</h3>
+        <p class="price">$1.50 / Litre</p>
+        <div class="quantity-control">
+          <label for="milk-qty">Quantity (Litre):</label>
+          <input type="number" id="milk-qty" value="1" min="0.5" step="0.5">
+        </div>
+        <button onclick="addToCart('Fresh Milk', 1.50, 'milk-qty', 'Litre')">Add to Cart</button>
+      </div>
+
+      <!-- Product 2: Yoghurt -->
+      <div class="product-card">
+        <img src="https://www.chelseasmessyapron.com/wp-content/uploads/2016/07/Yogurt-Bowl-8.jpg" alt="Fresh Yoghurt">
+        <h3>Pure Yoghurt</h3>
+        <p class="price">$2.00 / KG</p>
+        <div class="quantity-control">
+          <label for="yoghurt-qty">Quantity (KG):</label>
+          <input type="number" id="yoghurt-qty" value="1" min="0.5" step="0.5">
+        </div>
+        <button onclick="addToCart('Pure Yoghurt', 2.00, 'yoghurt-qty', 'KG')">Add to Cart</button>
+      </div>
+
+      <!-- Product 3: Lassi -->
+      <div class="product-card">
+        <img src="https://ikneadtoeat.com/wp-content/uploads/2022/11/salty-lassi-4.jpg" alt="Fresh Lassi">
+        <h3>Traditional Lassi</h3>
+        <p class="price">$1.20 / Litre</p>
+        <div class="quantity-control">
+          <label for="lassi-qty">Quantity (Litre):</label>
+          <input type="number" id="lassi-qty" value="1" min="0.5" step="0.5">
+        </div>
+        <button onclick="addToCart('Traditional Lassi', 1.20, 'lassi-qty', 'Litre')">Add to Cart</button>
+      </div>
+
+    </div>
+
+    <!-- Order Summary & Checkout Section -->
+    <section class="cart-section">
+      <h2>Your Cart</h2>
+      <ul id="cart-items"></ul>
+      <div class="total-price">
+        <strong>Total Amount: $<span id="cart-total">0.00</span></strong>
+      </div>
+      
+      <div class="checkout-actions">
+        <button class="btn-pay" onclick="payWithStripe()">Pay Online (Credit Card)</button>
+        <button class="btn-whatsapp" onclick="sendWhatsAppOrder()">Order via WhatsApp / COD</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
