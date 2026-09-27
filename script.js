@@ -55,7 +55,7 @@ function sendWhatsAppOrder() {
     return;
   }
 
-  const shopPhoneNumber = "1234567890"; // Put your WhatsApp phone number with country code here
+  const shopPhoneNumber = "+923053349832"; // Put your WhatsApp phone number with country code here
   let orderText = "Hello! I would like to place an order:\n\n";
   let grandTotal = 0;
 
